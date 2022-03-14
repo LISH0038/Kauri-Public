@@ -28,7 +28,7 @@ do
   echo "*** This setup needs ${split[3]} physical machines! ***"
   echo '**********************************************'
 
-  for i in {1..5}
+  for i in {1..2}
   do
         # Deploy experiment
         docker stack deploy -c kauri-temp.yaml kauriservice &
