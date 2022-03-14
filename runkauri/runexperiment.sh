@@ -16,7 +16,7 @@ do
   echo $LINE
   sed  "s/${ORIGINAL_STRING}/${LINE}/g" $FILENAME > kauri-temp.yaml
 
-  for i in {1..5}
+  for i in {1..2}
   do
         # Deploy experiment
         docker stack deploy -c kauri-temp.yaml kauriservice &
