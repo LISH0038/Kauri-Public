@@ -111,7 +111,7 @@ bool HotStuffCore::on_deliver_blk(const block_t &blk) {
                 long ms = ((end.tv_sec - start.tv_sec) * 1000000 + end.tv_usec - start.tv_usec) / 1000;
                 processed_blocks++;
                 summed_latency += ms;
-                HOTSTUFF_LOG_PROTO("Average: %d", summed_latency / processed_blocks);
+                HOTSTUFF_LOG_INFO("Average: %d", summed_latency / processed_blocks);
             }
         }
     }
