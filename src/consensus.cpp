@@ -103,8 +103,10 @@ bool HotStuffCore::on_deliver_blk(const block_t &blk) {
         gettimeofday(&end, NULL);
         auto hash = blk->hash;
         proposal_time[blk->hash] = end;
+        HOTSTUFF_LOG_PROTO("here1");
 
         if (blk->qc_ref) {
+            HOTSTUFF_LOG_PROTO("here2");
             auto it = proposal_time.find(blk->qc_ref->hash);
             if (it != proposal_time.end()) {
                 struct timeval start = it->second;
